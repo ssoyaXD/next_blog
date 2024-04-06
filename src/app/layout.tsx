@@ -1,3 +1,4 @@
+import GoGithubButton from '@/components/GoGithubButton';
 import './globals.css'
 import type { Metadata } from "next";
 import { Gowun_Dodum } from "next/font/google";
@@ -35,6 +36,7 @@ export default function RootLayout({
         </section>
         <footer className='w-5/6 h-56 bg-[#1c1c1c] text-white flex flex-col items-center mt-8'>
           <h2 className='mt-4'>Copyrightⓒ2024 ssoyaXD All Rights Reserved.</h2>
+          <GoGithubButton/>
         </footer>
       </body>
     </html>
