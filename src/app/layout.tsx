@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 import { Gowun_Dodum } from "next/font/google";
 import Link from "next/link";
 
-const dodum = Gowun_Dodum({ 
+const dodum = Gowun_Dodum({
   weight: '400',
-  subsets: ["latin"] });
+  subsets: ["latin"]
+});
 
 export const metadata: Metadata = {
   title: "ssoyaXD",
@@ -19,17 +20,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={dodum.className}>
-      <body>
-        <header>
-          <h1><Link href="/">ssoyaXD Blog</Link></h1>
+      <body className='flex flex-col items-center'>
+        <header className='w-5/6 h-auto flex justify-between mt-4'>
+          <h1 className='font-bold text-4xl'><Link href="/">ssoyaXD Blog</Link></h1>
           <nav>
-              <Link href="/">Home</Link>
-              <Link href="/posts">Posts</Link>
-              <Link href="/about">About</Link>
-              <Link href="/contact">Contact</Link>
+            <Link className='mr-3' href="/">Home</Link>
+            <Link className='mr-3' href="/posts">Posts</Link>
+            <Link className='mr-3' href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
           </nav>
         </header>
-      {children}
+        <section className='w-5/6'>
+          {children}
+        </section>
+        <footer className='w-5/6 h-56 bg-[#1c1c1c] text-white flex flex-col items-center mt-8'>
+          <h2 className='mt-4'>Copyrightⓒ2024 ssoyaXD All Rights Reserved.</h2>
+        </footer>
       </body>
     </html>
   );

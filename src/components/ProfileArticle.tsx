@@ -10,11 +10,11 @@ export default function ProfileArticle() {
   return (
     <>
     <div className='flex flex-col items-center'>
-      <Image className="rounded-full" src={profileImage} alt='profile' width={250} height={250}></Image>
+      <Image className="rounded-full w-56 h-56" src={profileImage} alt='profile'></Image>
     </div>
     <div className='flex flex-col items-center'>
       <p>ssoyaXD</p>
-      <button className="rounded-full bg-[#78b1d4] text-white px-4 mt-4" onClick={() => router.push('/contact')}>Contact Me!</button>
+      <button className="rounded-full bg-blue-300 text-white px-4 mt-4" onClick={() => router.push('/contact')}>Contact Me!</button>
     </div>
     </>
   )
